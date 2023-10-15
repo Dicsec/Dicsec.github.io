@@ -28,7 +28,7 @@
 <meta property="og:description" content="此作为MATLAB笔记(一)的一些补充说明，会更新！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-13T13:25:06.000Z">
-<meta property="article:modified_time" content="2023-10-14T05:17:57.349Z">
+<meta property="article:modified_time" content="2023-10-15T06:20:56.587Z">
 <meta property="article:author" content="DSC">
 <meta property="article:tag" content="线性代数 MATLAB">
 <meta name="twitter:card" content="summary">
@@ -213,7 +213,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-14 13:17:57" itemprop="dateModified" datetime="2023-10-14T13:17:57+08:00">2023-10-14</time>
+      <time title="修改时间：2023-10-15 14:20:56" itemprop="dateModified" datetime="2023-10-15T14:20:56+08:00">2023-10-15</time>
     </span>
 
   
@@ -236,7 +236,9 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x = int8(<span class="number">129</span>)</span><br><span class="line">x =</span><br><span class="line">   <span class="number">127</span></span><br><span class="line">&gt;&gt; x = uint8(<span class="number">129</span>)</span><br><span class="line">x =</span><br><span class="line">   <span class="number">129</span></span><br></pre></td></tr></table></figure>
 
 <p>(2)浮点型由函数single()、double()转换</p>
-<p>(3)实部和虚部默认双精度型，虚数单位为 i 或 j ，要<strong>注意</strong>的是在输入时虚部与 i 之间可以不加乘号，<strong>在 i 被赋值时</strong>，加乘号则为乘以赋的值，不加则作为虚数单位</p>
+<p>(3)复数型实部和虚部默认双精度型，虚数单位为 i 或 j ，要<strong>注意</strong>的是在输入时虚部与 i 之间可以不加乘号，<strong>在 i 被赋值时</strong>，加乘号则为乘以赋的值，不加则作为虚数单位，如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="built_in">i</span> = <span class="number">2</span>;</span><br><span class="line">&gt;&gt; <span class="number">2</span>+<span class="number">2</span>*<span class="built_in">i</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">6</span></span><br><span class="line">&gt;&gt; <span class="number">2</span>+<span class="number">2</span><span class="built_in">i</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">   <span class="number">2.0000</span> + <span class="number">2.0000</span><span class="built_in">i</span></span><br></pre></td></tr></table></figure>
+
 <hr>
 <h3 id="改变数值数据的输出格式"><a href="#改变数值数据的输出格式" class="headerlink" title="改变数值数据的输出格式"></a>改变数值数据的输出格式</h3><p>format命令格式：format 格式符，这会改变后面所有的输出格式</p>
 <p><strong>切记：format只改变了输出的格式，不影响数据的计算和存储</strong>，在MATLAB中数值默认为双精度型，且不加函数就无法在计算中被改变，毕竟数学计算的精确度重要性…</p>
@@ -260,20 +262,26 @@
 <h3 id="矩阵中每个元素的标识"><a href="#矩阵中每个元素的标识" class="headerlink" title="矩阵中每个元素的标识"></a>矩阵中每个元素的标识</h3><p>分为<strong>全下标</strong>（index）和<strong>单下标</strong>（linear index）</p>
 <ul>
 <li>全下标：即我们所学的（i ，j）元</li>
-<li>单下标：把二维数组所有列从左至右首尾相接连成的一个一维数组，每个元素的位置即单下标</li>
+<li>单下标：把二维数组所有列从左至右首尾相接连成的一个一维数组，每个元素的位置即单下标，也可称为<strong>序号</strong></li>
 </ul>
 <p>这个“标识”是MATLAB在对矩阵的每个元素进行操作时的顺序，例如<strong>reshape()函数</strong>，在重塑矩阵形状时就根据每个元素的单下标来进行排序，其实这个函数的运行过程肢解开就是先把一个矩阵给化为列向量，再依次填到新矩阵的位置上。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">6</span>     <span class="number">3</span>     <span class="number">7</span>     <span class="number">0</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">6</span>     <span class="number">0</span>     <span class="number">0</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">1</span>     <span class="number">2</span>     <span class="number">8</span></span><br><span class="line">&gt;&gt; <span class="built_in">reshape</span>(A,<span class="number">4</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">6</span>     <span class="number">6</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">1</span>     <span class="number">0</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">7</span>     <span class="number">0</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">0</span>     <span class="number">8</span></span><br></pre></td></tr></table></figure>
 
 <p>这里可以清楚的看到第一列6,7,7后是3，说明3是单下标第四位。</p>
 <hr>
-<h3 id="如何选中矩阵中的某部分"><a href="#如何选中矩阵中的某部分" class="headerlink" title="如何选中矩阵中的某部分"></a>如何选中矩阵中的某部分</h3><p>A为任意矩阵，则我们用A(m，n)来表示A的第m行第n列的元素</p>
+<h3 id="如何选中矩阵中的某部分"><a href="#如何选中矩阵中的某部分" class="headerlink" title="如何选中矩阵中的某部分"></a>如何选中矩阵中的某部分</h3><ul>
+<li>A为任意矩阵，则我们用A(m，n)来表示A的第m行第n列的元素</li>
+<li>用A(m)表示序号为m的元素</li>
+</ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">0</span>     <span class="number">7</span>     <span class="number">1</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">3</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">1</span>     <span class="number">5</span>     <span class="number">2</span></span><br><span class="line">&gt;&gt; A(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">6</span></span><br></pre></td></tr></table></figure>
 
 <p>上面就选出了A中的第二行第三列的元素“6”，但我们如果要选中某一行（列）要如何操作呢，MATLAB中用冒号&lt; : &gt;表示选中所有行（列）</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">5</span>     <span class="number">4</span>     <span class="number">0</span></span><br><span class="line">     <span class="number">9</span>     <span class="number">1</span>     <span class="number">7</span></span><br><span class="line">     <span class="number">0</span>     <span class="number">9</span>     <span class="number">8</span></span><br><span class="line">&gt;&gt; A(:,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">4</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">     <span class="number">9</span></span><br></pre></td></tr></table></figure>
 
 <p>上面我们用&lt; : &gt;先选中所有行再选取第二列就得到我们想要的A的第二列，行同理。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">4</span>     <span class="number">7</span>     <span class="number">4</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">1</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">4</span>     <span class="number">7</span></span><br><span class="line">&gt;&gt; A(<span class="number">6</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>上面我们看到用序号（单下标）的方式直接选出了(3,2)位置的“4”</p>
 
     </div>
 

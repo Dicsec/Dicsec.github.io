@@ -30,11 +30,8 @@
 <meta property="og:image" content="http://example.com/Pictures/wps1.jpg">
 <meta property="og:image" content="http://example.com/Pictures/wps2.jpg">
 <meta property="og:image" content="http://example.com/Pictures/wps3.jpg">
-<meta property="og:image" content="http://example.com/Pictures/wps4.jpg">
-<meta property="og:image" content="http://example.com/Pictures/wps5.jpg">
-<meta property="og:image" content="http://example.com/Pictures/wps6.jpg">
 <meta property="article:published_time" content="2023-10-11T09:55:09.000Z">
-<meta property="article:modified_time" content="2023-10-14T05:12:43.262Z">
+<meta property="article:modified_time" content="2023-10-15T06:38:15.357Z">
 <meta property="article:author" content="DSC">
 <meta property="article:tag" content="线性代数  MATLAB">
 <meta name="twitter:card" content="summary">
@@ -220,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-14 13:12:43" itemprop="dateModified" datetime="2023-10-14T13:12:43+08:00">2023-10-14</time>
+      <time title="修改时间：2023-10-15 14:38:15" itemprop="dateModified" datetime="2023-10-15T14:38:15+08:00">2023-10-15</time>
     </span>
 
   
@@ -267,22 +264,30 @@
 <hr>
 <h3 id="创建一维数组变量"><a href="#创建一维数组变量" class="headerlink" title="创建一维数组变量"></a><strong>创建一维数组变量</strong></h3><h4 id="行向量创建"><a href="#行向量创建" class="headerlink" title="行向量创建"></a><strong>行向量创建</strong></h4><p>(1) 用方括号“[ ]”操作符，所有向量元素必须在“[ ]”之内；用空格或逗点&lt; , &gt;隔开。</p>
 <p>(2) 用冒号&lt; : &gt;操作符</p>
-<p><img src="/Pictures/wps4.jpg"> </p>
-<p>​                              <strong>(Increment是公差，此为等差数列)</strong></p>
-<p>eg. </p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;x = <span class="number">1</span>:<span class="number">5</span></span><br><span class="line">x = <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>  <span class="number">5</span></span><br><span class="line">&gt;&gt;y = <span class="number">1</span>:<span class="number">2</span>:<span class="number">6</span></span><br><span class="line">y = <span class="number">1</span>  <span class="number">3</span>  <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>格式：<strong>x&#x3D; A : B : C</strong></p>
+<ul>
+<li>A是x的第一个元素，x中的所有元素均不大于C，但是<strong>C不一定是x的最后一个元素</strong>，</li>
+<li>B为步长值，步长为1时可以省略不写</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=<span class="number">1</span>:<span class="number">5</span></span><br><span class="line">x =</span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span>     <span class="number">5</span></span><br><span class="line">&gt;&gt; x=<span class="number">1</span>:<span class="number">2</span>:<span class="number">6</span></span><br><span class="line">x =</span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span></span><br></pre></td></tr></table></figure>
 
 
 
 <p>(3) 利用函数linspace</p>
-<p><img src="/Pictures/wps5.jpg"> </p>
-<p>(4) 利用logspace</p>
+<p>x&#x3D;linspace(A , B , n)</p>
+<ul>
+<li>A是第一个元素，B是最后一个元素</li>
+<li>x中总共有n个元素，n不写则默认为100</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x = <span class="built_in">linspace</span>(<span class="number">10</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">x =</span><br><span class="line">    <span class="number">10</span>     <span class="number">9</span>     <span class="number">8</span>     <span class="number">7</span>     <span class="number">6</span>     <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="列向量创建"><a href="#列向量创建" class="headerlink" title="列向量创建"></a><strong>列向量创建</strong></h4><ul>
 <li><p><strong>方括号[]中用分号&lt; ; &gt;分割。</strong></p>
 </li>
 <li><p>在行向量后加转置符号&lt; ‘ &gt;，注意转置符号包括转置+共轭(即复数变成其共轭)，因此&lt; .’ &gt;用来完成单纯的转置。</p>
 </li>
 </ul>
+<hr>
 <h3 id="二维向量创建"><a href="#二维向量创建" class="headerlink" title="二维向量创建"></a><strong>二维向量创建</strong></h3><ul>
 <li><p><strong>用方括号[ ] ：行内元素用空格隔开，行之间用分号&lt; ; &gt;隔开。</strong></p>
 </li>
@@ -305,6 +310,7 @@
 <li><p>randn()——产生均值为0，方差为1的标准正态分布随机矩阵</p>
 </li>
 </ol>
+<hr>
 <h3 id="有用的空数组"><a href="#有用的空数组" class="headerlink" title="有用的空数组"></a><strong>有用的空数组</strong></h3><ul>
 <li><p>有一维是0的数组，用[ ]表示</p>
 </li>
@@ -321,11 +327,60 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">7</span>     <span class="number">1</span>     <span class="number">5</span>     <span class="number">6</span>     <span class="number">1</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">1</span>     <span class="number">2</span>     <span class="number">8</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">7</span>     <span class="number">9</span>     <span class="number">8</span></span><br><span class="line">     <span class="number">6</span>     <span class="number">9</span>     <span class="number">2</span>     <span class="number">5</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">6</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">1</span>     <span class="number">8</span></span><br><span class="line">&gt;&gt; A(<span class="number">1</span>:<span class="number">3</span>,:)=[]</span><br><span class="line">A =</span><br><span class="line">     <span class="number">6</span>     <span class="number">9</span>     <span class="number">2</span>     <span class="number">5</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">6</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">1</span>     <span class="number">8</span></span><br></pre></td></tr></table></figure>
 
 <p>上面可以看到我们先选中了1~3行，再选中其中所有列，进行删除。在笔记（二）中会讲到如何选中矩阵中的某部分。当然了，我们不可能把单个个元素删去，因为这样就无法构成矩阵。</p>
+<hr>
 </li>
 </ul>
 <h3 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a><strong>数组的运算</strong></h3><p>（<strong>前加点的即为矩阵的对应各个元素进行单独运算</strong>）</p>
-<p><img src="/Pictures/wps6.jpg"></p>
-<p>eg.</p>
+<table>
+<thead>
+<tr>
+<th align="center">运算</th>
+<th align="center">运算符</th>
+<th>含义说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">加</td>
+<td align="center">+</td>
+<td>对应元素相加</td>
+</tr>
+<tr>
+<td align="center">减</td>
+<td align="center">-</td>
+<td>对应元素相减</td>
+</tr>
+<tr>
+<td align="center">乘</td>
+<td align="center">*</td>
+<td>正常矩阵乘法</td>
+</tr>
+<tr>
+<td align="center">点乘</td>
+<td align="center">.*</td>
+<td>对应元素相乘(阶数相同)</td>
+</tr>
+<tr>
+<td align="center">幂</td>
+<td align="center">^</td>
+<td>正常矩阵幂运算</td>
+</tr>
+<tr>
+<td align="center">点幂</td>
+<td align="center">.^</td>
+<td>每个元素各自幂运算</td>
+</tr>
+<tr>
+<td align="center">左除或右除</td>
+<td align="center">\ 或 &#x2F;</td>
+<td>矩阵相除，一般A&#x2F;B≠B\A，毕竟矩阵乘法不满足交换律</td>
+</tr>
+<tr>
+<td align="center">左点除或右点除</td>
+<td align="center">.\ 或 .&#x2F;</td>
+<td>矩阵对应元素相除</td>
+</tr>
+</tbody></table>
+<p><em><strong>注意：若矩阵与单个数（即标量）进行加减运算时，是每个元素都与这个数加减，因为在MATLAB中没有单位矩阵E的定义</strong></em></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">A =  </span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span></span><br><span class="line">B =  </span><br><span class="line">     <span class="number">2</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; A.*B</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">8</span>    <span class="number">10</span>    <span class="number">12</span></span><br><span class="line">    <span class="number">14</span>    <span class="number">16</span>    <span class="number">18</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; A^<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">    <span class="number">30</span>    <span class="number">36</span>    <span class="number">42</span></span><br><span class="line">    <span class="number">66</span>    <span class="number">81</span>    <span class="number">96</span></span><br><span class="line">   <span class="number">102</span>   <span class="number">126</span>   <span class="number">150</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; A.^<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">4</span>     <span class="number">9</span></span><br><span class="line">    <span class="number">16</span>    <span class="number">25</span>    <span class="number">36</span></span><br><span class="line">    <span class="number">49</span>    <span class="number">64</span>    <span class="number">81</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>关系运算：</strong></p>
@@ -354,8 +409,8 @@
 <p><strong>对角矩阵：</strong>diag(A)——若A是一个m个元素的向量，则产生一个m×m的对角阵，其对角元为A的各元素</p>
 <p>​                                     若A是m×m矩阵，则产生一个m维列向量，由A的对角元组成</p>
 <p>​                  diag(A,k)——结果体现在第k条对角线(k为正则向上数，反之)</p>
-<p><strong>逆矩阵：</strong>inv(A)</p>
-<p><strong>矩阵行列式的值：</strong>det(A)</p>
+<p><strong>逆矩阵：</strong>inv(A)——求得A矩阵的逆矩阵B，AB&#x3D;E（A\B&#x3D;inv(A)<em>B</em>）</p>
+<p><strong>矩阵行列式的值：</strong>det(A)——真的很快，MATLAB算的真的很快</p>
 <p><strong>矩阵的秩：</strong>rank(A)——矩阵的非零子式的最高阶数（初等变换不改变矩阵的秩）</p>
 
     </div>
