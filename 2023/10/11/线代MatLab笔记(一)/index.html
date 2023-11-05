@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,20 +17,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="小记：MatLab中一般是写一条运行一条，会直接出结果在窗口上，若要不显示则在语句后加上分号&lt; ; &gt; 想写几串就直接在语句后面&lt; ; &gt;后接着写就是了，毕竟是用来快速计算的工具，方便点是好事。">
+    <meta name="description" content="小记：MatLab中一般是写一条运行一条，会直接出结果在窗口上，若要不显示则在语句后加上分号&lt; ; &gt; 想写几串就直接在语句后面&lt; ; &gt;后接着写就是了。 一些基础知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线代MatLab的笔记(一)">
 <meta property="og:url" content="http://example.com/2023/10/11/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="DSC&#39;s  Blog">
-<meta property="og:description" content="小记：MatLab中一般是写一条运行一条，会直接出结果在窗口上，若要不显示则在语句后加上分号&lt; ; &gt; 想写几串就直接在语句后面&lt; ; &gt;后接着写就是了，毕竟是用来快速计算的工具，方便点是好事。">
+<meta property="og:description" content="小记：MatLab中一般是写一条运行一条，会直接出结果在窗口上，若要不显示则在语句后加上分号&lt; ; &gt; 想写几串就直接在语句后面&lt; ; &gt;后接着写就是了。 一些基础知识">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/Pictures/wps1.jpg">
 <meta property="og:image" content="http://example.com/Pictures/wps2.jpg">
-<meta property="og:image" content="http://example.com/Pictures/wps3.jpg">
 <meta property="article:published_time" content="2023-10-11T09:55:09.000Z">
-<meta property="article:modified_time" content="2023-10-15T06:38:15.357Z">
+<meta property="article:modified_time" content="2023-11-01T09:55:52.667Z">
 <meta property="article:author" content="DSC">
 <meta property="article:tag" content="线性代数  MATLAB">
 <meta name="twitter:card" content="summary">
@@ -117,7 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">变量命名规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">预定义变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E5%8F%98%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">创建一维数组变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E5%90%91%E9%87%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">4.1.</span> <span class="nav-text">行向量创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%97%E5%90%91%E9%87%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">4.2.</span> <span class="nav-text">列向量创建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%90%91%E9%87%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">5.</span> <span class="nav-text">二维向量创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E7%A9%BA%E6%95%B0%E7%BB%84"><span class="nav-number">6.</span> <span class="nav-text">有用的空数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%BF%90%E7%AE%97"><span class="nav-number">7.</span> <span class="nav-text">数组的运算</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">变量命名规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">预定义变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="nav-number">4.</span> <span class="nav-text">一维数组创建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E5%90%91%E9%87%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">4.1.</span> <span class="nav-text">行向量创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%97%E5%90%91%E9%87%8F%E5%88%9B%E5%BB%BA"><span class="nav-number">4.2.</span> <span class="nav-text">列向量创建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="nav-number">5.</span> <span class="nav-text">二维数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%95%B0%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="nav-number">6.</span> <span class="nav-text">三维数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E7%A9%BA%E6%95%B0%E7%BB%84"><span class="nav-number">7.</span> <span class="nav-text">有用的空数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%BF%90%E7%AE%97"><span class="nav-number">8.</span> <span class="nav-text">数组的运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%82%E9%A1%B9"><span class="nav-number">9.</span> <span class="nav-text">杂项</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -132,12 +130,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -217,7 +215,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-15 14:38:15" itemprop="dateModified" datetime="2023-10-15T14:38:15+08:00">2023-10-15</time>
+      <time title="修改时间：2023-11-01 17:55:52" itemprop="dateModified" datetime="2023-11-01T17:55:52+08:00">2023-11-01</time>
     </span>
 
   
@@ -230,7 +228,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>小记：MatLab中一般是写一条运行一条，会直接出结果在窗口上，若要不显示则在语句后加上分号&lt; ; &gt;</p>
-<p>想写几串就直接在语句后面&lt; ; &gt;后接着写就是了，毕竟是用来快速计算的工具，方便点是好事。</p>
+<p>想写几串就直接在语句后面&lt; ; &gt;后接着写就是了。</p>
+<p>一些基础知识</p>
 <span id="more"></span>
 
 <hr>
@@ -245,7 +244,8 @@
 <li><p>不能有空格、标点。</p>
 </li>
 </ul>
-<h3 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a><strong>预定义变量</strong></h3><p> <img src="/Pictures/wps1.jpg"></p>
+<h3 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a><strong>预定义变量</strong></h3><p>就是关键字</p>
+<p> <img src="/Pictures/wps1.jpg"></p>
 <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a><strong>数据类型</strong></h3><p><img src="/Pictures/wps2.jpg"> </p>
 <p><strong>注：</strong>在MATLAB中可以直接输入一个值，它会直接被赋给ans，即answer</p>
 <p><strong>数值表示</strong></p>
@@ -260,9 +260,10 @@
 </li>
 </ul>
 <p><strong>复数及其运算</strong></p>
-<p><img src="/Pictures/wps3.jpg"> </p>
+<p> 用 i 和 j 都可以表示虚数单位，函数：</p>
+<p>实部 real()，虚部 imag()，辐角主值 angle()， 模 abs()，共轭 conj()</p>
 <hr>
-<h3 id="创建一维数组变量"><a href="#创建一维数组变量" class="headerlink" title="创建一维数组变量"></a><strong>创建一维数组变量</strong></h3><h4 id="行向量创建"><a href="#行向量创建" class="headerlink" title="行向量创建"></a><strong>行向量创建</strong></h4><p>(1) 用方括号“[ ]”操作符，所有向量元素必须在“[ ]”之内；用空格或逗点&lt; , &gt;隔开。</p>
+<h3 id="一维数组创建"><a href="#一维数组创建" class="headerlink" title="一维数组创建"></a><strong>一维数组创建</strong></h3><h4 id="行向量创建"><a href="#行向量创建" class="headerlink" title="行向量创建"></a><strong>行向量创建</strong></h4><p>(1) 用方括号“[ ]”操作符，所有向量元素必须在“[ ]”之内；用空格或逗点&lt; , &gt;隔开。</p>
 <p>(2) 用冒号&lt; : &gt;操作符</p>
 <p>格式：<strong>x&#x3D; A : B : C</strong></p>
 <ul>
@@ -288,28 +289,43 @@
 </li>
 </ul>
 <hr>
-<h3 id="二维向量创建"><a href="#二维向量创建" class="headerlink" title="二维向量创建"></a><strong>二维向量创建</strong></h3><ul>
+<h3 id="二维数组创建"><a href="#二维数组创建" class="headerlink" title="二维数组创建"></a><strong>二维数组创建</strong></h3><ul>
 <li><p><strong>用方括号[ ] ：行内元素用空格隔开，行之间用分号&lt; ; &gt;隔开。</strong></p>
 </li>
 <li><p><strong>函数方法 ：</strong></p>
 </li>
 </ul>
 <ol>
-<li><p>ones(i,j)——生成 i 行 j 列的全1矩阵    eg. ones(3)&#x3D;ones(3,3)</p>
+<li><p><strong>ones</strong>(i,j)——生成 i 行 j 列的全1矩阵    eg. ones(3)&#x3D;ones(3,3)</p>
 </li>
-<li><p>zero()——生成全0矩阵</p>
+<li><p><strong>zeros</strong>()——生成全0矩阵</p>
 </li>
-<li><p>reshape(a,i,j)——把 a 重塑成 i 行 j 列的矩阵，<strong>元素个数不变</strong>，数组元素从上到下按列排列</p>
+<li><p><strong>reshape</strong>(a,i,j)——把 a 重塑成 i 行 j 列的矩阵，<strong>元素个数不变</strong>，数组元素从上到下按列排列</p>
 </li>
-<li><p>eye()——产生单位矩阵</p>
+<li><p><strong>eye</strong>()——产生单位矩阵</p>
 </li>
-<li><p>magic()——产生魔方阵，即每行每列和对角线的和都相等</p>
+<li><p><strong>magic</strong>()——产生魔方阵，即每行每列和对角线的和都相等</p>
 </li>
-<li><p>rand()——产生0~1间均匀分布的<strong>随机</strong>矩阵</p>
+<li><p><strong>rand</strong>()——产生0~1间均匀分布的<strong>随机</strong>矩阵</p>
 </li>
-<li><p>randn()——产生均值为0，方差为1的标准正态分布随机矩阵</p>
+<li><p><strong>randn</strong>()——产生均值为0，方差为1的标准正态分布随机矩阵</p>
+</li>
+<li><p><strong>diag</strong>(A)——若A是一个m个元素的向量，则产生一个m×m的对角阵，其对角元为A的各元素</p>
+<p>​                                     若A是m×m矩阵，则产生一个m维列向量，由A的对角元组成</p>
+<p>diag(A,k)——结果体现在第k条对角线(k为正则向上数，反之)</p>
 </li>
 </ol>
+<hr>
+<h3 id="三维数组创建"><a href="#三维数组创建" class="headerlink" title="三维数组创建"></a><strong>三维数组创建</strong></h3><ul>
+<li><strong>直接法：</strong>分别输入三维数组的每一层的数，组合成一个三维的</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;a(:,:,<span class="number">1</span>) = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>];</span><br><span class="line">&gt;&gt;a(:,:,<span class="number">2</span>) = [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]</span><br><span class="line">a(:,:,<span class="number">1</span>) =</span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br><span class="line">a(:,:,<span class="number">2</span>) =</span><br><span class="line">     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>cat拼接法：</strong>利用cat函数把两个同阶级的二维数组按顺序拼接成三维数组</p>
+<p>eg. cat(3,A,B)</p>
+</li>
+</ul>
 <hr>
 <h3 id="有用的空数组"><a href="#有用的空数组" class="headerlink" title="有用的空数组"></a><strong>有用的空数组</strong></h3><ul>
 <li><p>有一维是0的数组，用[ ]表示</p>
@@ -327,9 +343,9 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">7</span>     <span class="number">1</span>     <span class="number">5</span>     <span class="number">6</span>     <span class="number">1</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">1</span>     <span class="number">2</span>     <span class="number">8</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">7</span>     <span class="number">9</span>     <span class="number">8</span></span><br><span class="line">     <span class="number">6</span>     <span class="number">9</span>     <span class="number">2</span>     <span class="number">5</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">6</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">1</span>     <span class="number">8</span></span><br><span class="line">&gt;&gt; A(<span class="number">1</span>:<span class="number">3</span>,:)=[]</span><br><span class="line">A =</span><br><span class="line">     <span class="number">6</span>     <span class="number">9</span>     <span class="number">2</span>     <span class="number">5</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">6</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">1</span>     <span class="number">8</span></span><br></pre></td></tr></table></figure>
 
 <p>上面可以看到我们先选中了1~3行，再选中其中所有列，进行删除。在笔记（二）中会讲到如何选中矩阵中的某部分。当然了，我们不可能把单个个元素删去，因为这样就无法构成矩阵。</p>
-<hr>
 </li>
 </ul>
+<hr>
 <h3 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a><strong>数组的运算</strong></h3><p>（<strong>前加点的即为矩阵的对应各个元素进行单独运算</strong>）</p>
 <table>
 <thead>
@@ -383,11 +399,12 @@
 <p><em><strong>注意：若矩阵与单个数（即标量）进行加减运算时，是每个元素都与这个数加减，因为在MATLAB中没有单位矩阵E的定义</strong></em></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">A =  </span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span></span><br><span class="line">B =  </span><br><span class="line">     <span class="number">2</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; A.*B</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">8</span>    <span class="number">10</span>    <span class="number">12</span></span><br><span class="line">    <span class="number">14</span>    <span class="number">16</span>    <span class="number">18</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; A^<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">    <span class="number">30</span>    <span class="number">36</span>    <span class="number">42</span></span><br><span class="line">    <span class="number">66</span>    <span class="number">81</span>    <span class="number">96</span></span><br><span class="line">   <span class="number">102</span>   <span class="number">126</span>   <span class="number">150</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; A.^<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">4</span>     <span class="number">9</span></span><br><span class="line">    <span class="number">16</span>    <span class="number">25</span>    <span class="number">36</span></span><br><span class="line">    <span class="number">49</span>    <span class="number">64</span>    <span class="number">81</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>关系运算：</strong></p>
+<hr>
+<h3 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><strong>杂项</strong></h3><p><strong>关系运算：</strong></p>
 <p>​      <strong>&lt;    &gt;&#x3D;    &lt;&#x3D;    &#x3D;&#x3D;    ~&#x3D;(不等于)</strong></p>
 <p>1、两个数比较时，直接比，成立为1，不成立为0</p>
 <p>2、维数相等矩阵比较，对应位置数比较，并在对应位置得到结果，最后组成一个维数相等的0、1矩阵</p>
-<p>3、矩阵与数比较时，矩阵各个元素与这个数比较，并在各自位置得到结果，得到0、1矩阵</p>
+<p>3、矩阵与数比较时，矩阵<strong>各个元素</strong>与这个数比较，并在各自位置得到结果，得到0、1矩阵</p>
 <p><strong>逻辑运算:</strong></p>
 <p><strong>&amp;(与)、 |(或)、 ~(非)</strong></p>
 <p><strong>最大最小值：</strong></p>
@@ -406,12 +423,9 @@
 <p><strong>求和：</strong>sum(A)——得到行向量，由<strong>每列的和</strong>组成</p>
 <p><strong>求积：</strong>prod(A)——得到行向量，由<strong>每列的积</strong>组成</p>
 <p><strong>求中值：</strong>median(A)——得到行向量，由<strong>每列的中值</strong>组成</p>
-<p><strong>对角矩阵：</strong>diag(A)——若A是一个m个元素的向量，则产生一个m×m的对角阵，其对角元为A的各元素</p>
-<p>​                                     若A是m×m矩阵，则产生一个m维列向量，由A的对角元组成</p>
-<p>​                  diag(A,k)——结果体现在第k条对角线(k为正则向上数，反之)</p>
-<p><strong>逆矩阵：</strong>inv(A)——求得A矩阵的逆矩阵B，AB&#x3D;E（A\B&#x3D;inv(A)<em>B</em>）</p>
+<p><strong>逆矩阵：</strong>inv(A)——求得A矩阵的逆矩阵B，前提要可逆 ;  pinv(A)——得到广义逆矩阵，A可逆时与inv()相同</p>
 <p><strong>矩阵行列式的值：</strong>det(A)——真的很快，MATLAB算的真的很快</p>
-<p><strong>矩阵的秩：</strong>rank(A)——矩阵的非零子式的最高阶数（初等变换不改变矩阵的秩）</p>
+<p><strong>矩阵的秩：</strong>rank(A)——矩阵的非零子式的最高阶数（初等变换不改变矩阵的秩）,所以就是等价标准型的E的阶数</p>
 
     </div>
 

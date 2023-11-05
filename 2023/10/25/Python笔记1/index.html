@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="从0开始">
+    <meta name="description" content="Python基础语法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初识C">
-<meta property="og:url" content="http://example.com/2023/10/12/C%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="Python笔记(一)">
+<meta property="og:url" content="http://example.com/2023/10/25/Python%E7%AC%94%E8%AE%B01/index.html">
 <meta property="og:site_name" content="DSC&#39;s  Blog">
-<meta property="og:description" content="从0开始">
+<meta property="og:description" content="Python基础语法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-11T22:38:30.000Z">
-<meta property="article:modified_time" content="2023-11-05T05:55:59.582Z">
+<meta property="article:published_time" content="2023-10-24T23:57:26.000Z">
+<meta property="article:modified_time" content="2023-11-03T12:53:17.674Z">
 <meta property="article:author" content="DSC">
-<meta property="article:tag" content="C&#x2F;C++">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2023/10/12/C%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2023/10/25/Python%E7%AC%94%E8%AE%B01/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/10/12/C%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2023/10/12/C的学习笔记/","title":"初识C"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/10/25/Python%E7%AC%94%E8%AE%B01/","path":"2023/10/25/Python笔记1/","title":"Python笔记(一)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>初识C | DSC's  Blog</title>
+<title>Python笔记(一) | DSC's  Blog</title>
   
 
 
@@ -112,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E8%BF%9B%E5%88%B6%E6%8D%A2%E7%AE%97%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">各进制换算方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">原码与补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">3.</span> <span class="nav-text">常用转义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">4.</span> <span class="nav-text">C中的变量声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">定义常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">6.</span> <span class="nav-text">位运算符</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Python基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict-set%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">dict &#x2F; set基本用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E4%B8%8EOpenCV"><span class="nav-number">2.</span> <span class="nav-text">Python与OpenCV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E4%B8%8EPytorch"><span class="nav-number">3.</span> <span class="nav-text">Python与Pytorch</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/12/C%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/25/Python%E7%AC%94%E8%AE%B01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -189,12 +189,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="初识C | DSC's  Blog">
+      <meta itemprop="name" content="Python笔记(一) | DSC's  Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          初识C
+          Python笔记(一)
         </h1>
 
         <div class="post-meta-container">
@@ -205,14 +205,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-10-12 06:38:30" itemprop="dateCreated datePublished" datetime="2023-10-12T06:38:30+08:00">2023-10-12</time>
+      <time title="创建时间：2023-10-25 07:57:26" itemprop="dateCreated datePublished" datetime="2023-10-25T07:57:26+08:00">2023-10-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-11-05 13:55:59" itemprop="dateModified" datetime="2023-11-05T13:55:59+08:00">2023-11-05</time>
+      <time title="修改时间：2023-11-03 20:53:17" itemprop="dateModified" datetime="2023-11-03T20:53:17+08:00">2023-11-03</time>
     </span>
 
   
@@ -224,117 +224,87 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>从0开始</p>
-<span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><h2 id="Python基础语法"><a href="#Python基础语法" class="headerlink" title="Python基础语法"></a>Python基础语法</h2><span id="more"></span>
 
+<p>Python中用缩进来代表代码块，因此需要准确地对齐</p>
+<p>Python的变量很自由，除了不能以数字开头，其他都可以，除了一些奇怪的语言，测试过大部分语言的文字都可以作为变量名</p>
 <hr>
-<p>话废不多，现在正式开始正文，都是些常识。</p>
-<hr>
-<h2 id="各进制换算方法"><a href="#各进制换算方法" class="headerlink" title="各进制换算方法"></a>各进制换算方法</h2><ul>
-<li>以十进制数为基准点进行换算，如十进制化为二进制就不断除以2取余数，直到商为0为止，再将得到的数（应该只有0和1）依次从右向左写得到对应的二进制数，八进制和十六进制同理。</li>
-<li>八进制以0开头，只有0~7</li>
-<li>十六进制以0x开头，有0<del>9和a</del>f</li>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul>
+<li>Python 中单引号 <strong>‘</strong> 和双引号 <strong>“</strong> 使用完全相同。</li>
+<li>使用三引号(<strong>‘ ‘ ‘</strong> 或 <strong>“ “ “</strong>)可以指定一个多行字符串。</li>
+<li>转义符 \</li>
+<li>反斜杠可以用来转义，使用 <strong>r</strong> 可以让反斜杠不发生转义。 如 <strong>r”this is a line with \n”</strong> 则 <strong>\n</strong> 会显示，并不是换行，这时会发现\n的高亮取消</li>
+<li>按字面意义级联字符串，如 <strong>“this “ “is “ “string”</strong> 会被自动转换为 <strong>this is string</strong>。</li>
+<li>字符串可以用 <strong>+</strong> 运算符连接在一起，用 ***** 运算符重复。</li>
+<li>Python 中的字符串有两种索引方式，从左往右以 <strong>0</strong> 开始，从右往左以 <strong>-1</strong> 开始。</li>
+<li>Python 中的字符串不能改变，即一旦给定就不能被改变其中的某个字符</li>
+<li>Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。</li>
+<li>字符串的截取的语法格式如下：**变量[头下标:尾下标:步长]**，从左向右是0 ~ n-1，从右向左是-n ~ -1</li>
 </ul>
 <hr>
-<h2 id="原码与补码"><a href="#原码与补码" class="headerlink" title="原码与补码"></a>原码与补码</h2><ul>
-<li>最少为8位，即一个byte（字节）</li>
-<li>原码：把一个数的绝对值转换为二进制并在最高位上标志符号，正为0，负为1</li>
-<li>补码：正数的补码与原码相同，负数的补码是原码按位取反，再加1（二进制的1），例如-11的原码为10001011，则按位取反后为01110100，再加一得到补码01110101</li>
-</ul>
+<p>Python中的变量不需要声明，赋值后即可使用</p>
+<p>在运算中，与C不同的是除法和乘方，Python中&lt; &#x2F; &gt;默认为浮点除法，&lt; &#x2F;&#x2F; &gt;才是整除。乘方不需要函数，</p>
+<p>用&lt; ** &gt;来表示</p>
 <hr>
-<h2 id="常用转义字符"><a href="#常用转义字符" class="headerlink" title="常用转义字符"></a>常用转义字符</h2><table>
-<thead>
-<tr>
-<th align="center">\0</th>
-<th align="left">空字符，字符串中用于中断</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\a</td>
-<td align="left">响铃，当输出时发出声音</td>
-</tr>
-<tr>
-<td align="center">\b</td>
-<td align="left">退格，相当于退格键(Backspace)的作用</td>
-</tr>
-<tr>
-<td align="center">\t</td>
-<td align="left">水平制表，相当于Tab键的作用</td>
-</tr>
-<tr>
-<td align="center">\n</td>
-<td align="left">相当于回车换行的作用</td>
-</tr>
-<tr>
-<td align="center">\r</td>
-<td align="left">移到本行的第一列并删除这一列的东西</td>
-</tr>
-<tr>
-<td align="center">\f</td>
-<td align="left">换页，移到下一页的开头</td>
-</tr>
-<tr>
-<td align="center">\v</td>
-<td align="left">垂直制表，跳到下一个Home位置</td>
-</tr>
-<tr>
-<td align="center">\“</td>
-<td align="left">得到 “</td>
-</tr>
-<tr>
-<td align="center">\‘</td>
-<td align="left">得到 ‘</td>
-</tr>
-<tr>
-<td align="center">\\</td>
-<td align="left">得到 \</td>
-</tr>
-<tr>
-<td align="center">\ddd</td>
-<td align="left">无开头0的三位八进制数，换算成十进制数后对应的ASCII码对应的字符</td>
-</tr>
-<tr>
-<td align="center">\xhh</td>
-<td align="left">十六进制数——&gt;十进制数对应的ASCII码值对应字符</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="C中的变量声明"><a href="#C中的变量声明" class="headerlink" title="C中的变量声明"></a>C中的变量声明</h2><p>（变量声明之后才可以使用，声明是告诉编译器这个变量以指定的名称和类型进行使用）</p>
-<p>声明有两种：</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>list列表用[  ]</p>
 <ul>
-<li><p>第一种是类型+变量名，声明时为其创建存储空间，如int a</p>
+<li>**列表名.append()**：在末尾加入</li>
+<li>**列表名.insert(位置, )**：在特定位置加入</li>
+<li>**列表名.pop(元素下标)**：删除某个元素</li>
+<li><strong>列表名[被换者下标] &#x3D; 元素</strong>：用一个元素替换列表中的某个元素</li>
+</ul>
+<p>tuple元组用(  )，元组不可修改（元素中若有列表，则列表内元素可更改），在只有一个元素时，要在括号内加逗号&lt; , &gt;防止被认为是括号运算</p>
+<hr>
+<h3 id="dict-set基本用法"><a href="#dict-set基本用法" class="headerlink" title="dict &#x2F; set基本用法"></a>dict &#x2F; set基本用法</h3><ul>
+<li><strong>dict</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;DDD&#x27;</span>:<span class="number">6</span> , <span class="number">32</span>:<span class="number">7</span> , <span class="number">6</span>:<span class="number">8</span>&#125;	 <span class="comment">#名字：元素</span></span><br><span class="line"><span class="built_in">print</span>(d[<span class="string">&#x27;DDD&#x27;</span>])			    <span class="comment">#名称[key]来查找对应元素</span></span><br><span class="line"><span class="built_in">len</span>(d)					   <span class="comment">#len函数返回长度</span></span><br><span class="line">d.get(Key)				   <span class="comment">#当Key不存在时得到 None</span></span><br><span class="line">d[<span class="string">&#x27;AAA&#x27;</span>] = <span class="number">10</span>			   <span class="comment">#向dict加入新Key，若已存在则元素替换</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d:</span><br><span class="line">    <span class="built_in">print</span>(i,d[i])		   <span class="comment">#输遍dict的元素 </span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>set</strong></p>
+<p>相当于一个没有顺序的list，因此用for循环输出时没有固定顺序，加入元素用<strong>add()<strong>，删除用</strong>remove()</strong></p>
 </li>
-<li><p>第二种是extern+类型+变量名，声明同时不用创建存储空间，因为extern是引入外部变量，即全局变量，是不在本函数内就被声明过的变量，可以在本函数之后或之前，或在其他源文件中。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">int</span> a; <span class="comment">//声明，不是定义，且引入时类型不可变//</span></span><br><span class="line"><span class="type">int</span> a; <span class="comment">//声明且定义//</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
-<h2 id="定义常量"><a href="#定义常量" class="headerlink" title="定义常量"></a>定义常量</h2><p>方式：</p>
-<ol>
-<li>使用 <strong>#define</strong> 预处理，定义某个名称为一个常量值，且之后不可改变</li>
-<li>使用 <strong>const</strong> 关键字，<code>const 类型 常量名 = 值；</code> ，不可改变</li>
-</ol>
-<p>区别：</p>
+<h2 id="Python与OpenCV"><a href="#Python与OpenCV" class="headerlink" title="Python与OpenCV"></a>Python与OpenCV</h2><p><strong>注意：以下函数前均要有&lt;cv2.&gt;</strong></p>
 <ul>
-<li>#define 只能把某个名称定位一个值，无类型之分，不占存储</li>
-<li>const 可以有类型，占存储</li>
+<li><p><strong>inRange</strong>（a,b,c）：a是要处理的图像，b、c分别为颜色的BGR下限和上限</p>
+</li>
+<li><p><strong>imshow</strong>(“窗口名”,对象名称)：展示对应图片且窗口以” “中名字命名</p>
+</li>
+<li><p><strong>imread</strong>(对象名称)：读取对象图片(路径)</p>
+</li>
+<li><p><strong>返回值,轮廓层级 &#x3D; findContours</strong>(image,mode,method)：得到轮廓，mode是轮廓检索模式，method是轮廓近似方法</p>
+<p>mode：有cv2.RETR_EXTERNAL（只检测外轮廓）；</p>
+<p>​			cv2.RETR_LIST；cv2.RETR_CCOMP；cv2.RETR_TREE（所有轮廓）</p>
+<p>method：有cv2.CHAIN_APPROX_NONE（足够近的点连成线）；cv2.CHAIN_APPROX_SIMPLE（几点框住面）</p>
+</li>
+<li><p><strong>contourArea</strong>(对象名)：计算对象面积</p>
+</li>
+<li><p><strong>rectangle</strong>(对象名,(x,y),(x+w,y+h),颜色值,线条粗细)：用矩形框住对应的图像</p>
+</li>
 </ul>
 <hr>
-<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>分类：</p>
+<h2 id="Python与Pytorch"><a href="#Python与Pytorch" class="headerlink" title="Python与Pytorch"></a>Python与Pytorch</h2><p><strong>注意：以下函数前均要有&lt;torch.&gt;</strong></p>
 <ul>
-<li>“&amp;”——且，都是1才为1</li>
-<li>“|”——或，即有一个是1则为1</li>
-<li>“^”——异为1，同为0</li>
-<li>“~”——按位取反</li>
-<li>“&lt;&lt;”——把二进制数向左移指定位数，后面补0</li>
-<li>“&gt;&gt;”——与&lt;&lt;相反</li>
+<li><strong>tensor</strong>：创建数组</li>
+<li><strong>FloatTensor</strong>()：创建浮点型tensor，括号内具体写或写维度</li>
 </ul>
-<p>化成二进制数后按每个位置算</p>
-<p>如A&#x3D;60&#x3D;00111100，B&#x3D;13&#x3D;00001101，</p>
-<p>则A&amp;B&#x3D;00001100</p>
-<p>A|B&#x3D;00111101</p>
-<p>A^B&#x3D;00110001</p>
-<p>~A&#x3D;11000011</p>
-<p>A&lt;&lt;3&#x3D;111100000</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = torch.tensor([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>rand</strong>()：随机，0~1的数</li>
+<li><strong>randn</strong>()：正态分布数</li>
+<li><strong>arange</strong>(始,末,步长)：左闭右开区间内以步长取值</li>
+<li>**zeros(),ones(),eye()**：与MATLAB相同</li>
+<li><strong>empty</strong>()：无初始化的数组</li>
+<li><strong>mul</strong>()：对应元素相乘相当于MATLAB的&lt; .* &gt;</li>
+<li><strong>mm</strong>()：矩阵乘法，直接用&lt; * &gt;是对应元素乘积</li>
+<li><strong>dot</strong>()：向量点乘</li>
+<li><strong>mv</strong>(矩阵,向量)：矩阵与向量乘积</li>
+<li><strong>div</strong>(x,y)：求商</li>
+</ul>
+<hr>
 
     </div>
 
@@ -344,20 +314,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/C-C/" rel="tag"># C/C++</a>
+              <a href="/tags/python/" rel="tag"># python</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/10/11/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%80)/" rel="prev" title="线代MatLab的笔记(一)">
-                  <i class="fa fa-angle-left"></i> 线代MatLab的笔记(一)
+                <a href="/2023/10/13/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%89)/" rel="prev" title="线代MatLab笔记(三)">
+                  <i class="fa fa-angle-left"></i> 线代MatLab笔记(三)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/10/12/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" rel="next" title="建站心得">
-                  建站心得 <i class="fa fa-angle-right"></i>
+                <a href="/2023/11/05/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E5%9B%9B)/" rel="next" title="线代MatLab笔记(四)">
+                  线代MatLab笔记(四) <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
