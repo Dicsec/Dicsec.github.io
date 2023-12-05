@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="多项式 创建  123a &#x3D; [1,2,3,4]	#相当于𝑥^3+2𝑥^2+3𝑥+4，计算时用a&gt;&gt;fa &#x3D; poly2sym(a)	#用来看的，无法用于计算fa &#x3D; x^3 + 2*x^2 + 3*x + 4   代入求值  1y &#x3D; polyval(a,值)	#值可以是具体数字也可以是变量，若是矩阵则每个元素都代入算一遍   求根  12r &#x3D; roots(a)	#在复数">
+    <meta name="description" content="多项式 创建  123a &#x3D; [1,2,3,4]	#相当于𝑥^3+2𝑥^2+3𝑥+4，计算时用a&gt;&gt;fa &#x3D; poly2sym(a)	#用来看的，无法用于poly的计算fa &#x3D; x^3 + 2*x^2 + 3*x + 4  $$x^3 + 2x^2 + 3x + 4$$  代入求值  1y &#x3D; polyval(a,值)	#值可以是具体数字也可以是变量，若是矩阵则每个元素都代入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线代MatLab笔记(四)">
 <meta property="og:url" content="http://example.com/2023/11/05/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E5%9B%9B)/index.html">
 <meta property="og:site_name" content="DSC&#39;s  Blog">
-<meta property="og:description" content="多项式 创建  123a &#x3D; [1,2,3,4]	#相当于𝑥^3+2𝑥^2+3𝑥+4，计算时用a&gt;&gt;fa &#x3D; poly2sym(a)	#用来看的，无法用于计算fa &#x3D; x^3 + 2*x^2 + 3*x + 4   代入求值  1y &#x3D; polyval(a,值)	#值可以是具体数字也可以是变量，若是矩阵则每个元素都代入算一遍   求根  12r &#x3D; roots(a)	#在复数">
+<meta property="og:description" content="多项式 创建  123a &#x3D; [1,2,3,4]	#相当于𝑥^3+2𝑥^2+3𝑥+4，计算时用a&gt;&gt;fa &#x3D; poly2sym(a)	#用来看的，无法用于poly的计算fa &#x3D; x^3 + 2*x^2 + 3*x + 4  $$x^3 + 2x^2 + 3x + 4$$  代入求值  1y &#x3D; polyval(a,值)	#值可以是具体数字也可以是变量，若是矩阵则每个元素都代入">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-05T05:18:45.000Z">
-<meta property="article:modified_time" content="2023-11-05T05:48:40.837Z">
+<meta property="article:modified_time" content="2023-11-17T12:51:11.327Z">
 <meta property="article:author" content="DSC">
 <meta property="article:tag" content="线性代数 MATLAB">
 <meta name="twitter:card" content="summary">
@@ -127,12 +127,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -204,9 +204,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-11-05 13:18:45 / 修改时间：13:48:40" itemprop="dateCreated datePublished" datetime="2023-11-05T13:18:45+08:00">2023-11-05</time>
+      <time title="创建时间：2023-11-05 13:18:45" itemprop="dateCreated datePublished" datetime="2023-11-05T13:18:45+08:00">2023-11-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-11-17 20:51:11" itemprop="dateModified" datetime="2023-11-17T20:51:11+08:00">2023-11-17</time>
     </span>
 
   
@@ -223,8 +229,9 @@
 <h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><ul>
 <li><strong>创建</strong></li>
 </ul>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]	#相当于𝑥^<span class="number">3</span>+<span class="number">2</span>𝑥^<span class="number">2</span>+<span class="number">3</span>𝑥+<span class="number">4</span>，计算时用a</span><br><span class="line">&gt;&gt;fa = poly2sym(a)	#用来看的，无法用于计算</span><br><span class="line">fa = x^<span class="number">3</span> + <span class="number">2</span>*x^<span class="number">2</span> + <span class="number">3</span>*x + <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]	#相当于𝑥^<span class="number">3</span>+<span class="number">2</span>𝑥^<span class="number">2</span>+<span class="number">3</span>𝑥+<span class="number">4</span>，计算时用a</span><br><span class="line">&gt;&gt;fa = poly2sym(a)	#用来看的，无法用于poly的计算</span><br><span class="line">fa = x^<span class="number">3</span> + <span class="number">2</span>*x^<span class="number">2</span> + <span class="number">3</span>*x + <span class="number">4</span></span><br></pre></td></tr></table></figure>
 
+<p>$$<br>x^3 + 2x^2 + 3x + 4<br>$$</p>
 <ul>
 <li><strong>代入求值</strong></li>
 </ul>
