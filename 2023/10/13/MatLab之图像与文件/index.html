@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基础">
+    <meta name="description" content="左侧的文件，以及窗口的画图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线代MatLab笔记(三)">
-<meta property="og:url" content="http://example.com/2023/10/13/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%89)/index.html">
+<meta property="og:title" content="MatLab之图像与文件">
+<meta property="og:url" content="http://example.com/2023/10/13/MatLab%E4%B9%8B%E5%9B%BE%E5%83%8F%E4%B8%8E%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="DSC&#39;s  Blog">
-<meta property="og:description" content="基础">
+<meta property="og:description" content="左侧的文件，以及窗口的画图">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-13T14:49:07.000Z">
-<meta property="article:modified_time" content="2023-12-05T12:17:03.568Z">
+<meta property="article:modified_time" content="2023-12-08T12:08:52.403Z">
 <meta property="article:author" content="DSC">
 <meta property="article:tag" content="线性代数 MATLAB">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2023/10/13/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%89)/">
+<link rel="canonical" href="http://example.com/2023/10/13/MatLab%E4%B9%8B%E5%9B%BE%E5%83%8F%E4%B8%8E%E6%96%87%E4%BB%B6/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/10/13/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%89)/","path":"2023/10/13/线代MatLab笔记(三)/","title":"线代MatLab笔记(三)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/10/13/MatLab%E4%B9%8B%E5%9B%BE%E5%83%8F%E4%B8%8E%E6%96%87%E4%BB%B6/","path":"2023/10/13/MatLab之图像与文件/","title":"MatLab之图像与文件"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>线代MatLab笔记(三) | DSC's  Blog</title>
+<title>MatLab之图像与文件 | DSC's  Blog</title>
   
 
 
@@ -112,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">结构语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%EF%BC%88%E5%88%A4%E6%96%AD%EF%BC%89%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">选择（判断）结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">循环结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#m%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">m文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">脚本文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">函数文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB%E7%94%BB%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">MATLAB画图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%9B%B2%E7%BA%BF%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">二维曲线函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%9B%B2%E7%BA%BF%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">三维曲线函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%84%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">数据统计与处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">多项式</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">结构语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%EF%BC%88%E5%88%A4%E6%96%AD%EF%BC%89%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">选择（判断）结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">循环结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#m%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">m文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">脚本文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">函数文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB%E7%94%BB%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">MATLAB画图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%9B%B2%E7%BA%BF%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">二维曲线函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%9B%B2%E7%BA%BF%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">三维曲线函数</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/13/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%B8%89)/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/13/MatLab%E4%B9%8B%E5%9B%BE%E5%83%8F%E4%B8%8E%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -189,12 +189,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="线代MatLab笔记(三) | DSC's  Blog">
+      <meta itemprop="name" content="MatLab之图像与文件 | DSC's  Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          线代MatLab笔记(三)
+          MatLab之图像与文件
         </h1>
 
         <div class="post-meta-container">
@@ -212,7 +212,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-05 20:17:03" itemprop="dateModified" datetime="2023-12-05T20:17:03+08:00">2023-12-05</time>
+      <time title="修改时间：2023-12-08 20:08:52" itemprop="dateModified" datetime="2023-12-08T20:08:52+08:00">2023-12-08</time>
     </span>
 
   
@@ -224,7 +224,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>基础</p>
+    <div class="post-body" itemprop="articleBody"><p>左侧的文件，以及窗口的画图</p>
 <span id="more"></span>
 
 <h2 id="结构语法"><a href="#结构语法" class="headerlink" title="结构语法"></a>结构语法</h2><p>每个结构以end结尾，告诉程序结构结束，程序控制语句与C相同</p>
@@ -234,7 +234,7 @@
 <li><strong>switch–case–otherwise–end</strong>（不加冒号，otherwise 作 default 的作用）</li>
 <li><strong>try–catch–end</strong></li>
 </ul>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span></span><br><span class="line">&gt;&gt; B = [<span class="number">7</span> <span class="number">8</span> <span class="number">9</span>;<span class="number">10</span> <span class="number">11</span> <span class="number">12</span>]</span><br><span class="line">B =</span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span></span><br><span class="line">    <span class="number">10</span>    <span class="number">11</span>    <span class="number">12</span></span><br><span class="line">&gt;&gt; <span class="keyword">try</span></span><br><span class="line">C = A*B;</span><br><span class="line"><span class="keyword">catch</span>		#若<span class="keyword">try</span>的语句不能执行，则执行<span class="keyword">catch</span>的语句</span><br><span class="line">C = A.*B;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">&gt;&gt; C</span><br><span class="line">C =</span><br><span class="line">     <span class="number">7</span>    <span class="number">16</span>    <span class="number">27</span></span><br><span class="line">    <span class="number">40</span>    <span class="number">55</span>    <span class="number">72</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">A =</span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span></span><br><span class="line">&gt;&gt; B = [<span class="number">7</span> <span class="number">8</span> <span class="number">9</span>;<span class="number">10</span> <span class="number">11</span> <span class="number">12</span>]</span><br><span class="line">B =</span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span></span><br><span class="line">    <span class="number">10</span>    <span class="number">11</span>    <span class="number">12</span></span><br><span class="line">&gt;&gt; <span class="keyword">try</span></span><br><span class="line">C = A*B;</span><br><span class="line"><span class="keyword">catch</span>		# 若<span class="keyword">try</span>的语句不能执行，则执行<span class="keyword">catch</span>的语句</span><br><span class="line">C = A.*B;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">&gt;&gt; C</span><br><span class="line">C =</span><br><span class="line">     <span class="number">7</span>    <span class="number">16</span>    <span class="number">27</span></span><br><span class="line">    <span class="number">40</span>    <span class="number">55</span>    <span class="number">72</span></span><br></pre></td></tr></table></figure>
 
 <hr>
 <h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><ul>
@@ -250,57 +250,28 @@
 <h3 id="函数文件"><a href="#函数文件" class="headerlink" title="函数文件"></a>函数文件</h3><p>函数有输入参数和输出值，函数文件开头为： function [a，b] &#x3D; 函数名(c)</p>
 <p>a，b是输出的值，可以有多个，c是输入的参数，在函数文件内是写名称，调用函数时赋值，</p>
 <p>如要调用这个函数(文件名a1)</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[a，b]</span> = 函数名<span class="params">(c)</span>	#函数文件的内容</span></span><br><span class="line"></span><br><span class="line">&gt;&gt;[x,y] = a1(<span class="number">10</span>)	#将c赋值为<span class="number">10</span>并带入函数得到a，b的值对应给x，y</span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[a，b]</span> = 函数名<span class="params">(c)</span>	# 函数文件的内容</span></span><br><span class="line"></span><br><span class="line">&gt;&gt;[x,y] = a1(<span class="number">10</span>)	# 将c赋值为<span class="number">10</span>并带入函数得到a，b的值对应给x，y</span><br></pre></td></tr></table></figure>
 
 <p>函数文件里的<strong>主函数即函数名与文件名相同的函数</strong>，其余的都是子函数，与C语言相同，子函数不运行，但可以在主函数里被调用</p>
 <hr>
 <h2 id="MATLAB画图"><a href="#MATLAB画图" class="headerlink" title="MATLAB画图"></a>MATLAB画图</h2><ul>
-<li>**图例设置：legend(‘…’,’location’,’best’)**：其中…是图例内容，best指图例位置最佳化</li>
-<li><strong>图形保持：</strong>利用hold on语句和hold off语句来保证hold on前绘制的图线不被替换，可以做到在一个窗口内绘制分别绘制多个图像</li>
-<li><strong>标题：</strong>title(‘   ‘)            ；<strong>x轴标记：</strong>xlabel(‘   ‘)</li>
-<li>在一个figure里分别绘制多个图，用subplot(m,n,p)函数，得到m×n型(m行n列)的分块，并选中第p个分块</li>
+<li>图例设置：<code>legend(&#39;...&#39;,&#39;location&#39;,&#39;best&#39;)</code>：其中…是图例内容，best指图例位置最佳化</li>
+<li><strong>图形保持：</strong>利用<code>hold on</code>语句和<code>hold off</code>语句来保证hold on前绘制的图线不被替换，可以做到在一个窗口内绘制分别绘制多个图像</li>
+<li><strong>标题：</strong><code>title(&#39;   &#39;)</code>            ；<strong>x轴标记：</strong><code>xlabel(&#39;   &#39;)</code></li>
+<li>在一个figure里分别绘制多个图，用<code>subplot(m,n,p)</code>函数，得到m×n型(m行n列)的分块，并选中第p个分块</li>
 </ul>
-<h3 id="二维曲线函数"><a href="#二维曲线函数" class="headerlink" title="二维曲线函数"></a>二维曲线函数</h3><p>利用<strong>plot(x, y)<strong>函数可以得到对应变量的</strong>实际</strong>图像。如果直接用plot(a)，得到的只是图形，其坐标与实际不符，因为<strong>当a是向量时</strong>，a的每个元素代表一个y轴的值，元素的单下标代表x轴的的值；<strong>当a是矩阵时</strong>，每列单独对应一个图线，在图像上以颜色区分。</p>
+<h3 id="二维曲线函数"><a href="#二维曲线函数" class="headerlink" title="二维曲线函数"></a>二维曲线函数</h3><p>利用<code>plot(x, y)</code>函数可以得到对应变量的<strong>实际</strong>图像。如果直接用plot(a)，得到的只是图形，其坐标与实际不符，因为<strong>当a是向量时</strong>，a的每个元素代表一个y轴的值，元素的单下标代表x轴的的值；<strong>当a是矩阵时</strong>，每列单独对应一个图线，在图像上以颜色区分。</p>
 <ul>
-<li><p>**格式：plot(x ,y ,‘b:o’)**：图线设置 b蓝 g绿 r红 c青 m紫 y黄 k黑 w白</p>
+<li><p>格式：<code>plot(x ,y ,‘b:o’)</code>：图线设置 b蓝 g绿 r红 c青 m紫 y黄 k黑 w白</p>
 <p>​            					% _ 实线 :点线 _ _虚线 -.点画线</p>
 <p>​           					 % .实点 o圆圈 x叉 +十字 *星号 s方块 d菱形 v下三角 ^上三角 &lt;左三角 &gt;右三角 p五角星 h六角星</p>
 </li>
-<li><p><strong>坐标轴设置：axis([x1,x2,y1,y2])<strong>，注意x轴画图时是以</strong>给定向量的下标</strong>作为x轴数字，并非具体实数，如1×100型向 量，得到的范围是0~100</p>
+<li><p>坐标轴设置：<code>axis([x1,x2,y1,y2])</code>，注意x轴画图时是以<strong>给定向量的下标</strong>作为x轴数字，并非具体实数，如1×100型向 量，得到的范围是0~100</p>
 <p>​					  <strong>xlim；ylim；zlim</strong>：都是显示各轴的范围或设置范围</p>
 </li>
 </ul>
-<h3 id="三维曲线函数"><a href="#三维曲线函数" class="headerlink" title="三维曲线函数"></a>三维曲线函数</h3><p>绘制三维用到的函数<strong>plot3(x , y , z )</strong></p>
+<h3 id="三维曲线函数"><a href="#三维曲线函数" class="headerlink" title="三维曲线函数"></a>三维曲线函数</h3><p>绘制三维用到的函数<code>plot3(x , y , z )</code></p>
 <hr>
-<h2 id="数据统计与处理"><a href="#数据统计与处理" class="headerlink" title="数据统计与处理"></a>数据统计与处理</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">max</span>(X)	#求最大值，当a是矩阵时，每列求最大</span><br><span class="line">[a,b] = <span class="built_in">max</span>(X)	#得到最大值a和其下标b</span><br></pre></td></tr></table></figure>
-
-<p>max(A,B)指的是同型矩阵A和B对应元素最大值组成的新矩阵，因此我们可以用**max(A , [ ] , 2)**来求出A每行的最大值</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mean</span>(X)		<span class="comment">%每列均值</span></span><br><span class="line"><span class="built_in">mean</span>(X,<span class="number">2</span>)	<span class="comment">%每行均值</span></span><br><span class="line">median(X)	<span class="comment">%每列中值</span></span><br><span class="line">median(X,<span class="number">2</span>)	<span class="comment">%每行中值</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>排序</strong></li>
-</ul>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span>(A,dim,method)	<span class="comment">%dim默认为1按列，为2时按行，method默认为升序&#x27;ascend&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>sum();prod()：求和，求积同上</p>
-<p>cumsum();cumprod()：累加累乘用法同上，效果就是后面的加上前面的总和</p>
-<hr>
-<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><ul>
-<li><strong>创建</strong></li>
-</ul>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]	#相当于𝑥^<span class="number">3</span>+<span class="number">2</span>𝑥^<span class="number">2</span>+<span class="number">3</span>𝑥+<span class="number">4</span>，计算时用a</span><br><span class="line">&gt;&gt;fa = poly2sym(a)	#用来看的，无法用于poly的计算</span><br><span class="line">fa = x^<span class="number">3</span> + <span class="number">2</span>*x^<span class="number">2</span> + <span class="number">3</span>*x + <span class="number">4</span></span><br></pre></td></tr></table></figure>
-
-<p>$$<br>x^3 + 2x^2 + 3x + 4<br>$$</p>
-<ul>
-<li><strong>代入求值</strong></li>
-</ul>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = polyval(a,值)	#值可以是具体数字也可以是变量，若是矩阵则每个元素都代入算一遍</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>求根</strong></li>
-</ul>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r = roots(a)	#在复数域上求根，得到一个矩阵（几元方程就有几个根）</span><br><span class="line">a = poly(r)		#利用根的矩阵求系数矩阵</span><br></pre></td></tr></table></figure>
-
 
     </div>
 
@@ -317,13 +288,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/10/13/%E7%BA%BF%E4%BB%A3MatLab%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" rel="prev" title="线代MatLab笔记(二)">
-                  <i class="fa fa-angle-left"></i> 线代MatLab笔记(二)
+                <a href="/2023/10/13/MatLab%E4%B9%8B%E6%95%B0%E7%BB%84%E7%AF%87%E7%BB%AD/" rel="prev" title="MatLab之数组篇续">
+                  <i class="fa fa-angle-left"></i> MatLab之数组篇续
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/10/25/Python%E7%AC%94%E8%AE%B01/" rel="next" title="Python笔记(一)">
-                  Python笔记(一) <i class="fa fa-angle-right"></i>
+                <a href="/2023/10/25/Python%E7%AC%94%E8%AE%B01/" rel="next" title="Python">
+                  Python <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
